@@ -1,4 +1,4 @@
-from maths import add, sub, mul, div
+from maths import add, sub, mul, div, fibonacci
 
 
 def test_add():
@@ -41,9 +41,19 @@ def test_div():
     assert div(-11, -2) == 5.5
 
 
+def test_fibonacci():
+    assert fibonacci(-2) == None
+    assert fibonacci(-1) == None
+    assert fibonacci(0) == None
+    assert fibonacci(1) == 0
+    assert fibonacci(2) == 1
+    assert fibonacci(5) == 3
+
+
 if __name__ == "__main__":
     test_add()
     test_sub()
     test_mul()
     test_div()
+    test_fibonacci()
     print('Testing has ended')
