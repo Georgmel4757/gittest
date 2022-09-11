@@ -1,4 +1,4 @@
-__all__ = ['add', 'sub', 'mul', 'div', 'fibonacci']
+__all__ = ['add', 'sub', 'mul', 'div', 'fibonacci', 'factorial']
 
 
 def add(a, b):
@@ -24,4 +24,14 @@ def fibonacci(n):
             a, b = b, a + b
             n -= 1
         return a
+    return None
+
+
+def factorial(n):
+    if n >= 0:
+        product = 1
+        while n > 1:
+            product *= n
+            n -= 1
+        return product
     return None
