@@ -1,4 +1,5 @@
-__all__ = ['Vector2', 'add', 'sub', 'mul', 'div', 'fibonacci', 'factorial']
+__all__ = ['Vector2', 'add', 'sub', 'mul', 'div',
+           'fibonacci', 'factorial', 'gcd']
 
 
 class Vector2:
@@ -50,3 +51,9 @@ def factorial(n):
             n -= 1
         return product
     return None
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a%b
+    return a
